@@ -4,7 +4,8 @@ import styles from './Room.module.css';
 const Room = (props) => {
     const { room } = props;
     return (
-        <a className={styles.room} href="/">
+        // eslint-disable-next-line
+        <a className={styles.room} href="#">
             <img className={styles.picture} src={room.imageUrl} alt=""/>
             <div className={styles.name}>
                 {room.name}

@@ -6,7 +6,6 @@ import RoomList from '../components/RoomList';
 class Home extends React.Component {
     state = {
         rooms: [],
-        
     }
 
     componentDidMount() {
