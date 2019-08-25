@@ -1,16 +1,17 @@
 import React from 'react';
 import styles from './Room.module.css';
 
-const Room = () => {
+const Room = (props) => {
+    const { room } = props;
     return (
         <a className={styles.room} href="/">
-            <img className={styles.picture} src="https://images.unsplash.com/photo-1551776235-dde6d482980b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2134&q=80" alt=""/>
+            <img className={styles.picture} src={room.imageUrl} alt=""/>
             <div className={styles.name}>
-                Deluxe Single Room
+                {room.name}
             </div>
             <div className={styles.info}>
                 <div className={styles.info_name}>
-                    Deluxe Single Room
+                    {room.name}
                 </div>
                 <div className={styles.info_price_box_group}>
                     <div className={styles.info_price_box}>
@@ -18,7 +19,7 @@ const Room = () => {
                             平日(一~四)
                         </div>
                         <div className={styles.info_price_box_content}>
-                            $NT 1,380 / 晚
+                            $NT {room.normalDayPrice} / 晚
                         </div>
                     </div>
                     <div className={styles.info_price_box}>
@@ -26,7 +27,7 @@ const Room = () => {
                             假日(五~日)
                         </div>
                         <div className={styles.info_price_box_content}>
-                            $NT 1,500 / 晚
+                            $NT {room.holidayPrice} / 晚
                         </div>
                     </div>
                 </div>
