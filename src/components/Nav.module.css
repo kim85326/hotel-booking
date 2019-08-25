@@ -1,0 +1,30 @@
+.nav {
+    display: flex;
+}
+
+.nav_item {
+    display: inline-block;
+    background-color: transparent;
+    color: #333333;
+    padding: 16px 48px;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 23px;
+    letter-spacing: 1.6px;
+    border-radius: 5px;
+    border: 1px solid #e0e0e0;
+    cursor: pointer;
+    margin-right: 24px;
+}
+
+.nav_item:hover,
+.nav_item:focus,
+.nav_item:active {
+    outline: none;
+}
+
+.nav_item:hover,
+.active {
+    background-color: white;
+    color: #2a58a8;
+}

@@ -1,0 +1,87 @@
+.room {
+    text-decoration: none;
+    display: flex;
+    align-items: flex-end;
+    position: relative;
+    width: 386px;
+    height: 400px;
+    overflow: hidden;
+    border-radius: 5px;
+    margin: 16px 8px;
+}
+
+.room:hover {
+    box-shadow: -2px 2px 10px 0.1px rgba(0, 0, 0, 0.3);
+}
+
+.picture {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    border-radius: 5px;
+}
+
+.name {
+    color: white;
+    font-size: 20px;
+    font-weight: 900;
+    padding: 24px;
+}
+
+.info {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background-color: white;
+    border-radius: 0 0 5px 5px;
+    transition: all 0.3s;
+    transform: translateY(100%);
+    visibility: hidden;
+}
+
+.room:hover .info {
+    transform: translateY(0);
+    visibility: visible;
+}
+
+.info_name {
+    color: #2a58a8;
+    font-size: 20px;
+    font-weight: 900;
+    line-height: 29px;
+    padding: 16px;
+    text-align: center;
+}
+
+.info_price_box_group {
+    border-top: 1px solid #f2f2f2;
+    display: flex;
+}
+
+.info_price_box {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+}
+
+.info_price_box:not(:last-child) {
+    border-right: 1px solid #f2f2f2;
+}
+
+.info_price_box_title {
+    color: #b4afaa;
+    line-height: 28px;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.info_price_box_content {
+    color: #333333;
+    line-height: 28px;
+    font-size: 16px;
+}
